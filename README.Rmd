@@ -18,8 +18,8 @@ o equivalentemente, la distancia media de cada punto de la tierra a cada persona
 
 # 2 Versión discreta
 
-![](results/Distribucion Poblacion-discreto-Edit.png)
+![](imagenes-editadas/Distribucion Poblacion-discreto-Edit.png)
 
 # 3 Versión continua
 
-![](results/Distribucion Poblacion-Edit2-01.png)
+![](imagenes-editadas/Distribucion Poblacion-Edit2-01.png)

@@ -9,8 +9,8 @@ de la tierra a cada persona.
 
 # 2 Versión discreta
 
-![](results/Distribucion%20Poblacion-discreto-Edit.png)
+![](imagenes-editadas/Distribucion%20Poblacion-discreto-Edit.png)
 
 # 3 Versión continua
 
-![](results/Distribucion%20Poblacion-Edit2-01.png)
+![](imagenes-editadas/Distribucion%20Poblacion-Edit2-01.png)
