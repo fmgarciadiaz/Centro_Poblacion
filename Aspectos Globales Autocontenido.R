@@ -103,7 +103,6 @@ shading.Grob <- ggplotGrob(shading)
 cat(yellow("[INFO] Guardando gráficos\n"))
 wmap_countries <- wmap_countries |> mutate(distancia_media = exact_extract(Population_rast, wmap_countries, 'mean'))
 g <- ggplot() +  
-  geom_sf(data = graticula, color = "white", alpha = 0.5, size = 0.1) +
   geom_sf(data = wmap_countries, aes(fill = distancia_media), color ="#f5f5f2", size = 0.1, alpha = 1) +  # ideal para indices
   geom_sf(data = ocean, fill ="#f5f5f2", color = "#f5f5f2", alpha = 1, size = 1) +
   geom_sf(data = wmap_countries, fill = NA, color ="#f5f5f2", size = 0.1, alpha = 1) +  # ideal para indices
@@ -120,6 +119,10 @@ svglite::svglite(results_dir %+% "Distribucion Poblacion-discreto.svg" , pointsi
 print(g)
 dev.off()
 
+png(results_dir %+% "Distribucion Poblacion-continuo.png", width = 3000 , height = 1500)
+print(g)
+dev.off()
+
 # Hacer mapa de distancias promedio
 g <- ggplot() +  
   geom_sf(data = wmap_countries, fill = "white", color ="black", size = 0.1, alpha = 1) +  
@@ -132,7 +135,12 @@ g <- ggplot() +
   theme(legend.position = "none") +
   labs(title = "Distribución global de la población", x = NULL, y = NULL, 
        subtitle = "Distancia media a cada ser humano", caption = "Fuente: F.García Díaz en base a WorldPop")
+
 svglite::svglite(results_dir %+% "Distribucion Poblacion-continuo.svg" , pointsize = 11 , width = 11 , height = 6.89)
+print(g)
+dev.off()
+
+png(results_dir %+% "Distribucion Poblacion-continuo.png", width = 3000 , height = 1500)
 print(g)
 dev.off()
 
